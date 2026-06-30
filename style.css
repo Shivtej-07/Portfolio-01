@@ -583,9 +583,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: center;
   border: 1px solid var(--card-border);
   backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.avatar-icon { width: 120px; height: 120px; }
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* Floating Icons */
 .float-icon {
@@ -803,7 +808,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   border-radius: var(--radius-lg);
 }
 
-.about-avatar svg { width: 160px; height: 160px; }
+.about-avatar svg,
+.about-avatar-img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; }
 
 .about-badge-row { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 
